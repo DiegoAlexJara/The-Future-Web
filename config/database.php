@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'host' => 'localhost',
-    'dbname' => 'thefutureweb',
-    'username' => 'root',
+    'host' => '',
+    'dbname' => '',
+    'username' => '',
     'password' => '',
     'charset' => 'utf8mb4',
 ];
