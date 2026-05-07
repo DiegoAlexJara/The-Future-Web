@@ -1,0 +1,19 @@
+# Evitar listado de directorios
+Options -Indexes
+
+# Bloquear acceso directo a archivos sensibles
+<FilesMatch "(\.env|\.htaccess|\.git|composer\.json|composer\.lock|config\.php|config\.ini)$">
+    Require all denied
+</FilesMatch>
+
+RewriteEngine On
+
+# 🚫 Bloquear carpeta config y todo su contenido (404)
+RewriteRule ^config(/.*)?$ - [R=404,L]
+
+# 🚫 Bloquear acceso directo a la carpeta App (solo si intentan entrar a /App/)
+RewriteRule ^App/?$ - [R=404,L]
+
+# ✅ Permitir acceso a archivos reales dentro de App (ejemplo: /App/Controller/UsersControllers/update.php)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule . - [L]
