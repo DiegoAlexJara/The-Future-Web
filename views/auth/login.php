@@ -38,7 +38,7 @@ GuestMiddleware::handle();
                                     <span class="input-group-text">
                                         <i class="fa-regular fa-envelope"></i>
                                     </span>
-                                    <input type="email" name="email" class="form-control" placeholder="Correo Electrónico" required>
+                                    <input type="email" name="email" class="form-control" placeholder="Correo Electrónico" required value="visitante@gmail.com">
                                 </div>
                             </div>
 
@@ -48,7 +48,7 @@ GuestMiddleware::handle();
                                     <span class="input-group-text">
                                         <i class="fa-solid fa-lock"></i>
                                     </span>
-                                    <input type="password" id="password" name="password" class="form-control" placeholder="********" required>
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="********" required value="Password123*">
                                     <button class="btn btn-outline-secondary" type="button" onclick="togglePassword()" id="icono">
                                         <i class="fa-regular fa-eye-slash"></i>
                                     </button>
